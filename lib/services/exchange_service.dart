@@ -35,7 +35,7 @@ class ExchangeService {
           '${date.year}-${date.month.toString().padLeft(2, '0')}-${date.day.toString().padLeft(2, '0')}';
       try {
         final response = await http.get(
-          Uri.parse(ni
+          Uri.parse(
               'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@$dateStr/v1/currencies/$f.json'),
         );
         if (response.statusCode == 200) {
